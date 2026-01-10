@@ -51,17 +51,20 @@ runs/segment/train/weights/best.pt  # YOLO11 세그멘테이션 모델
 ```
 
 ### 3. 이미지 분석 실행
+
 ```bash
 # 고급 형태/위험도 복합 분석 (권장)
 python3 crack_val_multi_analysis.py
 ```
+
 ```bash
 # 5단계 위험도 분석만 (폭 기준)
 python3 crack_val_risk.py
 ```
+
 ```bash
-# 균열 각도 시각화만
-python3 crack_val_angel.py
+# 균열 시각화만
+python3 crack_val_prediction.py
 ```
 
 ---
@@ -83,7 +86,7 @@ results = model.predict(img, conf=0.25, verbose=False)
 mean = np.mean(points, axis=0)
 cov = np.cov(points, rowvar=False)
 eigenvalues, eigenvectors = np.linalg.eigh(cov)
-main_direction = eigenvectors[:, -1]  # 주축 방향
+main_direction = eigenvectors[:, -1] 
 ```
 
 ### Step 3: 그래프 이론 보간
@@ -116,9 +119,13 @@ main_direction = eigenvectors[:, -1]  # 주축 방향
 | 기타 | 불규칙(Irregular) | **C Fair** |
 
 ### Step 6: 시각화
+- 원본 → YOLO 바운딩 + 화살표 → 폭/길이/각도 텍스트
 ```text
-원본 → YOLO 바운딩 + 화살표 → 폭/길이/각도 텍스트
-Crack #1 | Form: Perpendicular | WL Risk: C | Form Risk: B | W:0.22mm L:2.1mm Ang:93.5°
+Crack #1 (Form: Perpendicular)
+W/L Risk: C 
+Form Risk: B 
+W:0.22mm L:2.1mm
+Ang:93.5°
 ```
 
 ### Step 7: 실시간 비디오 처리
