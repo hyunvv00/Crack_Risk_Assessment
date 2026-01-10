@@ -113,7 +113,6 @@ main_direction = eigenvectors[:, -1]
 ```
 
 ### Step 4: 폭 기준 위험도 등급화
-- 
 - 변환: `PIXEL_TO_MM_FACTOR = 0.005mm`
 <div align="center">
 
