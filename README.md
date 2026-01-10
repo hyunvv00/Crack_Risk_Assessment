@@ -38,7 +38,7 @@ Crack_Detection/
 ---
 
 ## 빠른 시작
-입력: `./data/` 폴더의 이미지들 (PNG/JPG) 
+입력: `./datasets/` 폴더의 이미지들 (PNG/JPG) 
 
 출력: `./crackdetectionoutput*/` 폴더에 어노테이션 이미지 저장
 
