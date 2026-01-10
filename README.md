@@ -117,7 +117,7 @@ main_direction = eigenvectors[:, -1]
 <div align="center">
   
 | 각도/특징 | 형태 | 위험도 | 색상(RGB) | 상태 |
-|-----------|------|--------|
+|-----------|------|--------|-----------|------|
 | 0°/180° | 수평(Horizontality) | **D Poor** | (0,0,255) | 빨강 |
 | 15°~75° | 지그재그(DiagonalZigzag) | **E Critical** | (0,0,139) | 진홍 |
 | 75°~105° | 수직(Perpendicular) | **B Good** | (0,255,128) | 연녹 |
