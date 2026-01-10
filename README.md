@@ -97,6 +97,7 @@ main_direction = eigenvectors[:, -1]  # 주축 방향
 
 ### Step 4: 폭 기준 위험도 등급화
 - 변환: `PIXEL_TO_MM_FACTOR = 0.005mm`
+
 | 폭(mm) | 등급 | 색상(RGB) | 상태 |
 |--------|------|-----------|------|
 | <0.1 | **A Excellent** | (0,255,0) | 녹색 |
@@ -105,7 +106,7 @@ main_direction = eigenvectors[:, -1]  # 주축 방향
 | 0.3~0.5 | **D Poor** | (0,0,255) | 빨강 |
 | >0.5 | **E Critical** | (0,0,139) | 진홍 |
 
-### Step 5: 형태 분석 (Multi Analysis만)[12]
+### Step 5: 형태 분석 (Multi Analysis만)
 | 각도/특징 | 형태 | 위험도 |
 |-----------|------|--------|
 | 0°/180° | 수평(Horizontality) | **D Poor** |
