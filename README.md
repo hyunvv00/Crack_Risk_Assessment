@@ -121,9 +121,7 @@ main_direction = eigenvectors[:, -1]  # 주축 방향
 Crack #1 | Form: Perpendicular | WL Risk: C | Form Risk: B | W:0.22mm L:2.1mm Ang:93.5°
 ```
 
----
-
-## 실시간 비디오 처리
+### Step 7: 실시간 비디오 처리
 - Webcam/RTSP 스트림 지원
 - 20~30 FPS 실시간 처리 (GPU)
 - 연속 프레임 추적 가능
