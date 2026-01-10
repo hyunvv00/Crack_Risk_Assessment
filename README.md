@@ -101,7 +101,7 @@ main_direction = eigenvectors[:, -1]
 
 ### Step 4: 폭 기준 위험도 등급화
 - 변환: `PIXEL_TO_MM_FACTOR = 0.005mm`
-
+<div align="center">
 | 폭(mm) | 등급 | 색상(RGB) | 상태 |
 |--------|------|-----------|------|
 | <0.1 | **A Excellent** | (0,255,0) | 녹색 |
@@ -109,8 +109,10 @@ main_direction = eigenvectors[:, -1]
 | 0.2~0.3 | **C Fair** | (0,165,255) | 주황 |
 | 0.3~0.5 | **D Poor** | (0,0,255) | 빨강 |
 | >0.5 | **E Critical** | (0,0,139) | 진홍 |
-
+</div>
+  
 ### Step 5: 형태 분석 (Multi Analysis만)
+<div align="center">
 | 각도/특징 | 형태 | 위험도 |
 |-----------|------|--------|
 | 0°/180° | 수평(Horizontality) | **D Poor** |
@@ -118,6 +120,7 @@ main_direction = eigenvectors[:, -1]
 | 75°~105° | 수직(Perpendicular) | **B Good** |
 | L/W≥2 & 폭≤20px | 거미줄(Spiderweb) | **A Excellent** |
 | 기타 | 불규칙(Irregular) | **C Fair** |
+</div>
 
 ### Step 6: 시각화
 - 원본 → YOLO 바운딩 + 화살표 → 폭/길이/각도 텍스트
