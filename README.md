@@ -55,7 +55,7 @@ pip3 install ultralytics opencv-python scikit-image scikit-learn numpy
 
 ---
 
-## 모델 준비
+## 모델 
 ```
 runs/segment/train/weights/best.pt  # YOLO11 세그멘테이션 모델
 ```
